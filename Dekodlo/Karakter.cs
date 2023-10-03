@@ -24,6 +24,17 @@ namespace Dekodlo
             }
             return karakterKep;
         }
+        public bool Felismer(Karakter felism)
+        {
+            for (int s = 0; s < Matrix.GetLength; s++)
+			{
+                for (int o = 0; o < Matrix.GetLength; o++)
+			{
+                   if (this.Matrix[s,o]!= felism.Matrix[s, o]) return false;
+			}
+			}
+            return true;
+        }
 
         public Karakter(char betu, bool[,] matrix)
         {
